@@ -18,7 +18,16 @@ let posts = [
     imageUrl: "previews/day-1.png",
     date: "Day 1",
   },
-];
+  {
+    id: 2,
+    title: "Menu Icon",
+    href: "/day-2",
+    description:
+      "A hamburger menu icon that animates depending on its state. By using a hidden checkbox and Tailwind's peer class, I was able to implement this with CSS only.",
+    imageUrl: "previews/day-2.png",
+    date: "Day 2",
+  },
+].reverse();
 
 export default function Home() {
   return (
