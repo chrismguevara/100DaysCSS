@@ -63,12 +63,14 @@ export default function Home() {
                 className="flex flex-col items-start justify-between"
               >
                 <div className="relative w-full">
-                  <img
-                    alt=""
-                    src={post.imageUrl}
-                    className="aspect-video w-full rounded-2xl bg-gray-100 object-cover sm:aspect-2/1 lg:aspect-3/2"
-                  />
-                  <div className="absolute inset-0 rounded-2xl ring-1 ring-gray-900/10 ring-inset" />
+                  <Link to={post.href}>
+                    <img
+                      alt=""
+                      src={post.imageUrl}
+                      className="aspect-video w-full rounded-2xl bg-gray-100 object-cover sm:aspect-2/1 lg:aspect-3/2"
+                    />
+                    <div className="absolute inset-0 rounded-2xl ring-1 ring-gray-900/10 ring-inset" />
+                  </Link>
                 </div>
                 <div className="max-w-xl">
                   <div className="mt-8 flex items-center gap-x-4 text-xs">
