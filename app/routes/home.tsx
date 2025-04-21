@@ -27,6 +27,15 @@ let posts = [
     imageUrl: "previews/day-2.png",
     date: "Day 2",
   },
+  {
+    id: 3,
+    title: "The Pyramide",
+    href: "/day-3",
+    description:
+      "An animation of a sun going over a pyramid. Learned how to define CSS variables using Tailwind's bracket syntax.",
+    imageUrl: "previews/day-3.png",
+    date: "Day 3",
+  },
 ].reverse();
 
 export default function Home() {
