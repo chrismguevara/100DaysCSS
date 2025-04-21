@@ -1,44 +1,15 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
 import { Link } from "react-router";
-
+import { posts } from "./posts";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Chris' 100 Days of CSS" },
     { name: "description", content: "Chris' 100 Days of CSS" },
   ];
 }
-let posts = [
-  {
-    id: 1,
-    title: "100 Days CSS",
-    href: "/day-1",
-    description:
-      "The text '100 DAYS CSS CHALLENGE' styled with shadows and gradients. This was a nice introduction to Tailwind v4.",
-    imageUrl: "previews/day-1.png",
-    date: "Day 1",
-  },
-  {
-    id: 2,
-    title: "Menu Icon",
-    href: "/day-2",
-    description:
-      "A hamburger menu icon that animates depending on its state. By using a hidden checkbox and Tailwind's peer class, I was able to implement this with CSS only.",
-    imageUrl: "previews/day-2.png",
-    date: "Day 2",
-  },
-  {
-    id: 3,
-    title: "The Pyramide",
-    href: "/day-3",
-    description:
-      "An animation of a sun going over a pyramid. Learned how to define CSS variables using Tailwind's bracket syntax.",
-    imageUrl: "previews/day-3.png",
-    date: "Day 3",
-  },
-].reverse();
 
 export default function Home() {
+  let orderedPosts = [...posts].reverse();
   return (
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -52,12 +23,12 @@ export default function Home() {
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          {posts?.length <= 0 ? (
+          {orderedPosts?.length <= 0 ? (
             <div className="col-span-full text-center text-gray-600 py-10">
               No solutions yet. Come back soon!
             </div>
           ) : (
-            posts.map((post) => (
+            orderedPosts.map((post) => (
               <article
                 key={post.id}
                 className="flex flex-col items-start justify-between"
