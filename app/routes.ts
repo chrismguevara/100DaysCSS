@@ -7,5 +7,6 @@ export default [
     route("/days/1", "routes/day-1.tsx"),
     route("/days/2", "routes/day-2/day-2.tsx"),
     route("/days/3", "routes/day-3/day-3.tsx"),
+    route("/days/4", "routes/day-4/day-4.tsx"),
   ]),
 ] satisfies RouteConfig;

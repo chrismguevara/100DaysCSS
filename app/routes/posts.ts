@@ -15,7 +15,7 @@ export const posts = [
     title: "Menu Icon",
     href: "/days/2",
     description:
-      "A hamburger menu icon that animates depending on its state. By using a hidden checkbox and Tailwind's peer class, I was able to implement this with CSS only.",
+      "A hamburger menu icon that animates when you click on it. By using a hidden checkbox and Tailwind's peer class, I was able to implement this with CSS only.",
     imageUrl: "previews/day-2.png",
     date: "Day 2",
   },
@@ -27,5 +27,14 @@ export const posts = [
       "An animation of a sun going over a pyramid. Learned how to define CSS variables using Tailwind's bracket syntax.",
     imageUrl: "previews/day-3.png",
     date: "Day 3",
+  },
+  {
+    id: 4,
+    title: "Loading",
+    href: "/days/4",
+    description:
+      "A calming loading animation. I learned how to use CSS Grid to overlap the circles without absolute positioning and z-index setting.",
+    imageUrl: "previews/day-4.png",
+    date: "Day 4",
   },
 ];
