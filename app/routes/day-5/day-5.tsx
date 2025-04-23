@@ -1,5 +1,3 @@
-"use client";
-import { useEffect, useRef, useState } from "react";
 import type { Route } from "../+types/day-5";
 import "./day-5.css";
 
@@ -31,21 +29,6 @@ export default function Day5() {
   ];
   const pointWidth = 6;
   const pointHeight = 6;
-  const [size, setSize] = useState({ width: 0, height: 0 });
-  const cardRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    if (cardRef.current) {
-      const resizeObserver = new ResizeObserver((entries) => {
-        const entry = entries[0];
-        setSize({
-          width: Math.round(entry.contentRect.width),
-          height: Math.round(entry.contentRect.height),
-        });
-      });
-      resizeObserver.observe(cardRef.current);
-      return () => resizeObserver.disconnect();
-    }
-  }, []);
   return (
     <div
       className={`
@@ -60,7 +43,6 @@ export default function Day5() {
     >
       {/* Card */}
       <div
-        ref={cardRef}
         className={`
           w-[280px] h-[220px]
           rounded-sm overflow-hidden
@@ -337,10 +319,6 @@ export default function Day5() {
           <span className={`text-4xl`}>😡</span>
           <p className={`text-sm`}>TOO SMALL!!!</p>
         </div>
-      </div>
-      {/* Dimensions Display */}
-      <div className="absolute top-0 right-0 bg-black/75 text-white px-2 py-1 text-sm">
-        {size.width}px × {size.height}px
       </div>
     </div>
   );
