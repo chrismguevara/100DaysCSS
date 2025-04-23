@@ -51,4 +51,18 @@ export const posts = [
     imageUrl: "previews/day-5.png",
     date: "Day 5",
   },
+  {
+    id: 6,
+    title: "Profile",
+    href: "/days/6",
+    description:
+      `This is a user profile widget that displays various information about a user and a couple of action buttons.
+      Unlike the existing solution for this challenge, I made generous use of CSS Grid and flexbox to lay out the elements and made it more accessible.
+      For the profile picture, I used figure and figcaption elements to display the user's avatar and name.
+      The statistics are displayed in a data list element.
+      And finally, the action buttons are grouped together in a button group using the aria-label attribute and role="group", which tells screen readers that these buttons are related to each other.
+      `,
+    imageUrl: "previews/day-6.png",
+    date: "Day 6",
+  },
 ];
