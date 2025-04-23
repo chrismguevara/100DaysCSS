@@ -37,4 +37,13 @@ export const posts = [
     imageUrl: "previews/day-4.png",
     date: "Day 4",
   },
+  {
+    id: 5,
+    title: "Statistic",
+    href: "/days/5",
+    description:
+      "A widget that displays a line graph.",
+    imageUrl: "previews/day-5.png",
+    date: "Day 5",
+  },
 ];
