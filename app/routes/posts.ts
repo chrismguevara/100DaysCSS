@@ -42,7 +42,12 @@ export const posts = [
     title: "Statistic",
     href: "/days/5",
     description:
-      "A widget that displays a line graph.",
+      `A widget that displays a line graph with a legend.
+      Hovering over each datapoint displays a tooltip with the value.
+      The entire line graph is an SVG where each datapoint is a circle. To achieve the tooltip effect, I used the foreignObject element to embed the HTML tooltip within each datapoint.
+      I also used container queries to make the widget responsive. You can drag the bottom right corner to resize
+      the widget and see how it adapts to the new container size.
+      `,
     imageUrl: "previews/day-5.png",
     date: "Day 5",
   },

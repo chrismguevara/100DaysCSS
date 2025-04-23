@@ -1,5 +1,8 @@
+"use client";
+import { useEffect, useRef, useState } from "react";
 import type { Route } from "../+types/day-5";
 import "./day-5.css";
+
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "CSS Day 5" },
@@ -28,6 +31,21 @@ export default function Day5() {
   ];
   const pointWidth = 6;
   const pointHeight = 6;
+  const [size, setSize] = useState({ width: 0, height: 0 });
+  const cardRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (cardRef.current) {
+      const resizeObserver = new ResizeObserver((entries) => {
+        const entry = entries[0];
+        setSize({
+          width: Math.round(entry.contentRect.width),
+          height: Math.round(entry.contentRect.height),
+        });
+      });
+      resizeObserver.observe(cardRef.current);
+      return () => resizeObserver.disconnect();
+    }
+  }, []);
   return (
     <div
       className={`
@@ -42,13 +60,16 @@ export default function Day5() {
     >
       {/* Card */}
       <div
+        ref={cardRef}
         className={`
           w-[280px] h-[220px]
           rounded-sm overflow-hidden
           bg-white
           shadow-[10px_10px_15px_0_rgba(0,0,0,0.3)]
+          resize
+          @container
+          relative
         `}
-        style={{ resize: "both" }}
       >
         {/* Card Header */}
         <header
@@ -57,7 +78,13 @@ export default function Day5() {
           h-15
           pt-3
           px-4
-          flex justify-between
+          @min-[207px]:flex
+          @min-[207px]:justify-between
+
+          @max-[207px]:flex
+          @max-[207px]:flex-col 
+          @max-[207px]:items-center
+          @max-[207px]:text-center
           `}
         >
           <div>
@@ -69,7 +96,7 @@ export default function Day5() {
               <time dateTime="2023-02-07">07. Feb</time>
             </p>
           </div>
-          <dl className={`text-right`}>
+          <dl className={`text-right @max-[207px]:hidden`}>
             <dt className={`text-xs`}>Revenue</dt>
             <dd className={`text-sm font-bold leading-tight`}>$ 3621.79</dd>
           </dl>
@@ -94,6 +121,11 @@ export default function Day5() {
                 [&_span]:before:mr-2
                 [&_span]:before:content-['']
                 [&_span]:before:align-middle
+
+                @min-[400px]:text-[min(1.25rem,2.5cqw)]
+                @min-[400px]:[&_span]:before:h-[min(.5rem,1cqw)]
+                @min-[400px]:[&_span]:before:w-[min(2rem,3cqw)]
+                @min-[400px]:[&_span]:before:mr-[min(1rem,2.5cqw)]
               `}
             >
               <span className={`before:bg-[var(--graph-red)]`}>Views</span>
@@ -272,7 +304,12 @@ export default function Day5() {
               ))}
             </svg>
             <div
-              className={`flex justify-between text-[9px] text-[#949494] uppercase [&_span]:text-center pt-1.5`}
+              className={`
+                flex justify-between
+                text-[9px] text-[#949494] uppercase [&_span]:text-center pt-1.5
+                @min-[400px]:text-[min(1.25rem,2.5cqw)]
+                @min-[400px]:px-4
+                `}
             >
               <span>Mon</span>
               <span>Tue</span>
@@ -285,6 +322,25 @@ export default function Day5() {
           </figure>
           <div></div>
         </section>
+        {/* Size Warning */}
+        <div
+          className={`
+            hidden
+            @max-[143px]:flex flex-col items-center justify-center gap-2
+            absolute top-0 left-0
+            w-full h-full z-20
+            text-center
+            bg-white
+            text-black
+            `}
+        >
+          <span className={`text-4xl`}>😡</span>
+          <p className={`text-sm`}>TOO SMALL!!!</p>
+        </div>
+      </div>
+      {/* Dimensions Display */}
+      <div className="absolute top-0 right-0 bg-black/75 text-white px-2 py-1 text-sm">
+        {size.width}px × {size.height}px
       </div>
     </div>
   );
