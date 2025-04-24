@@ -1,4 +1,10 @@
-// TODO Add references to the components
+import Day1 from "./day-1/day-1";
+import Day2 from "./day-2/day-2";
+import Day3 from "./day-3/day-3";
+import Day4 from "./day-4/day-4";
+import Day5 from "./day-5/day-5";
+import Day6 from "./day-6/day-6";
+
 // TODO Add metadata for each post
 export const posts = [
   {
@@ -9,6 +15,7 @@ export const posts = [
       "The text '100 DAYS CSS CHALLENGE' styled with shadows and gradients. This was a nice introduction to Tailwind v4.",
     imageUrl: "previews/day-1.png",
     date: "Day 1",
+    component: Day1,
   },
   {
     id: 2,
@@ -18,6 +25,7 @@ export const posts = [
       "A hamburger menu icon that animates when you click on it. By using a hidden checkbox and Tailwind's peer class, I was able to implement this with CSS only.",
     imageUrl: "previews/day-2.png",
     date: "Day 2",
+    component: Day2,
   },
   {
     id: 3,
@@ -27,6 +35,7 @@ export const posts = [
       "An animation of a sun going over a pyramid. Learned how to define CSS variables using Tailwind's bracket syntax.",
     imageUrl: "previews/day-3.png",
     date: "Day 3",
+    component: Day3,
   },
   {
     id: 4,
@@ -36,6 +45,7 @@ export const posts = [
       "A calming loading animation. I learned how to use CSS Grid to overlap the circles without absolute positioning and z-index setting.",
     imageUrl: "previews/day-4.png",
     date: "Day 4",
+    component: Day4,
   },
   {
     id: 5,
@@ -50,6 +60,7 @@ export const posts = [
       `,
     imageUrl: "previews/day-5.png",
     date: "Day 5",
+    component: Day5,
   },
   {
     id: 6,
@@ -64,5 +75,6 @@ export const posts = [
       `,
     imageUrl: "previews/day-6.png",
     date: "Day 6",
+    component: Day6,
   },
 ];
