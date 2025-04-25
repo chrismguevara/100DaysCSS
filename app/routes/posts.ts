@@ -4,6 +4,7 @@ import Day3 from "./day-3/day-3";
 import Day4 from "./day-4/day-4";
 import Day5 from "./day-5/day-5";
 import Day6 from "./day-6/day-6";
+import Day7 from "./day-7/day-7";
 
 // TODO Add metadata for each post
 export const posts = [
@@ -76,5 +77,23 @@ export const posts = [
     imageUrl: "previews/day-6.png",
     date: "Day 6",
     component: Day6,
+  },
+  {
+    id: 7,
+    title: "Notifications",
+    href: "/days/7",
+    description:
+      `
+      Here's a notifications widget that displays the most recent notifications, allows you to search for notifications, and navigate to another page.
+      Unfortunately, I was unable to get the font awesome icons, so I temporarily replaced them with blocks for now.
+      When you click on the menu icon on the left, the sidenav reveals itself on the left.
+      When you click on the right icon, the search input is revealed in the header.
+      My favorite part of this challenge was actually getting the search input to display over the header because I achieved it without using absolute positioning.
+      The key is to use CSS Grid and explicitly set the search input's row to 1, which forces it to be placed over the header.
+      And when it is hidden, set pointer-events to none so that it doesn't intefere with any mouse events on the other parts of the header. 
+      `,
+    imageUrl: "previews/day-7.png",
+    date: "Day 7",
+    component: Day7,
   },
 ];
