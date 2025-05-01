@@ -5,6 +5,7 @@ import Day4 from "./day-4/day-4";
 import Day5 from "./day-5/day-5";
 import Day6 from "./day-6/day-6";
 import Day7 from "./day-7/day-7";
+import Day8 from "./day-8/day-8";
 
 // TODO Add metadata for each post
 export const posts = [
@@ -95,5 +96,17 @@ export const posts = [
     imageUrl: "previews/day-7.png",
     date: "Day 7",
     component: Day7,
+  },
+  {
+    id: 8,
+    title: "Metaballs",
+    href: "/days/8",
+    description:
+      `
+      A bunch of metaballs that move around a larger ball and melt into each other when they touch. This one was pretty tricky. In order to get that "gooey" effect, you need to combine two CSS filters: blur and contrast. These filters need to be applied to the element that contains the metaballs, and it must have a black background or else the contrast filter won't get applied.
+      `,
+    imageUrl: "previews/day-8.png",
+    date: "Day 8",
+    component: Day8,
   },
 ];
