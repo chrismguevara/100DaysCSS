@@ -6,6 +6,7 @@ import Day5 from "./day-5/day-5";
 import Day6 from "./day-6/day-6";
 import Day7 from "./day-7/day-7";
 import Day8 from "./day-8/day-8";
+import Day9 from "./day-9/day-9";
 
 // TODO Add metadata for each post
 export const posts = [
@@ -108,5 +109,19 @@ export const posts = [
     imageUrl: "previews/day-8.png",
     date: "Day 8",
     component: Day8,
+  },
+  {
+    id: 9,
+    title: "Rainy Night",
+    href: "/days/9",
+    description:
+      `
+      A view of a rainy night with the weather data displayed below. In this one, I learned how to create reusable components whose style can be overriden with CSS variables or utility classes.
+      This was especially helpful for generating the raindrops with varying sizes and randomly generated positions.
+      I also learned that utility classes won’t necessarily override the base component’s own classes if the base component already uses the same class. To fix this, I just made sure that the base component did not use utility classes that it might receive through props.
+      `,
+    imageUrl: "previews/day-9.png",
+    date: "Day 9",
+    component: Day9,
   },
 ];

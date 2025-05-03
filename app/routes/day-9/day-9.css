@@ -1,0 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400);
+
+@keyframes rise {
+  from {
+    transform: translate3d(-15%, 150%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes drop {
+  0% {
+    transform: translate3d(40px, -320px, 0) scale(1) rotate(17deg);
+  }
+  85% {
+    transform: translate3d(0, 0, 0) scale(1) rotate(17deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scaleY(0) scaleX(3) rotate(0deg);
+  }
+}
