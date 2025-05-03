@@ -24,32 +24,32 @@ export default function DayPage({ params }: Route.ComponentProps) {
             </p>
           </div>
           <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
-            <div className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
+            <div className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-start">
               <div className="w-[400px] h-[400px] shadow-[1px_2px_10px_rgba(0,0,0,0.3)] rounded-sm">
                 <DayComponent />
-                <div className="flex items-center justify-center gap-2 w-full pt-4">
-                  {isFirstDay ? (
-                    <div className="w-6 h-6">
-                      <span className="sr-only">No previous day available</span>
-                    </div>
-                  ) : (
-                    <Link to={`/days/${dayIndex - 1}`}>
-                      <NavArrow direction="left" />
-                      <span className="sr-only">Go to previous day</span>
-                    </Link>
-                  )}
-                  <span className="text-sm text-gray-500">Switch Day</span>
-                  {isLastDay ? (
-                    <div className="w-6 h-6">
-                      <span className="sr-only">No next day available</span>
-                    </div>
-                  ) : (
-                    <Link to={`/days/${dayIndex + 1}`}>
-                      <NavArrow direction="right" />
-                      <span className="sr-only">Go to next day</span>
-                    </Link>
-                  )}
-                </div>
+              </div>
+              <div className="flex items-center justify-center gap-2 w-full pt-4">
+                {isFirstDay ? (
+                  <div className="w-6 h-6">
+                    <span className="sr-only">No previous day available</span>
+                  </div>
+                ) : (
+                  <Link to={`/days/${dayIndex - 1}`}>
+                    <NavArrow direction="left" />
+                    <span className="sr-only">Go to previous day</span>
+                  </Link>
+                )}
+                <span className="text-sm text-gray-500">Switch Day</span>
+                {isLastDay ? (
+                  <div className="w-6 h-6">
+                    <span className="sr-only">No next day available</span>
+                  </div>
+                ) : (
+                  <Link to={`/days/${dayIndex + 1}`}>
+                    <NavArrow direction="right" />
+                    <span className="sr-only">Go to next day</span>
+                  </Link>
+                )}
               </div>
             </div>
           </div>
