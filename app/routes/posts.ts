@@ -1,4 +1,5 @@
 import Day1 from "./day-1/day-1";
+import Day10 from "./day-10/day-10";
 import Day2 from "./day-2/day-2";
 import Day3 from "./day-3/day-3";
 import Day4 from "./day-4/day-4";
@@ -123,5 +124,19 @@ export const posts = [
     imageUrl: "previews/day-9.png",
     date: "Day 9",
     component: Day9,
+  },
+  {
+    id: 10,
+    title: "Watch",
+    href: "/days/10",
+    description:
+      `
+      A watch widget with a nice animation around the border and a display of the current datetime along with some health data.
+      I learned a bit about how to use SVG circle to create the bezel animation.
+      The official solution used a lot of divs and absolute positioning to create the tick marks, but instead I just created a single SVG circle and used stroke-dasharray.
+      `,
+    imageUrl: "previews/day-10.png",
+    date: "Day 10",
+    component: Day10,
   },
 ];
