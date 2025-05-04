@@ -1,6 +1,7 @@
 import Day1 from "./day-1/day-1";
 import Day10 from "./day-10/day-10";
 import Day11 from "./day-11/day-11";
+import Day12 from "./day-12/day-12";
 import Day2 from "./day-2/day-2";
 import Day3 from "./day-3/day-3";
 import Day4 from "./day-4/day-4";
@@ -152,5 +153,22 @@ export const posts = [
     imageUrl: "previews/day-11.png",
     date: "Day 11",
     component: Day11,
+  },
+  {
+    id: 12,
+    title: "Tooltip",
+    href: "/days/12",
+    description:
+      `
+      (Note: This challenge is only supported in Chrome)
+      This is a quote with a tooltip that displays the definition of a word.
+      This time, I used CSS Anchor positioning to position the tooltip relative to the term.
+      However, CSS Anchor positioning is an experimental feature that is only supported in Chrome.
+      I also tried to make the tooltip more accessible by setting the aria-hidden attribute and using other semantic HTML elements like <dfn> and <figcaption>.
+      The trickiest part of this challenge was preventing the tooltip from closing when the mouse is hovering over the tooltip itself, while following accessibility best practices.
+      `,
+    imageUrl: "previews/day-12.png",
+    date: "Day 12",
+    component: Day12,
   },
 ];
