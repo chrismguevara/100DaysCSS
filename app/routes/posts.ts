@@ -1,5 +1,6 @@
 import Day1 from "./day-1/day-1";
 import Day10 from "./day-10/day-10";
+import Day11 from "./day-11/day-11";
 import Day2 from "./day-2/day-2";
 import Day3 from "./day-3/day-3";
 import Day4 from "./day-4/day-4";
@@ -138,5 +139,18 @@ export const posts = [
     imageUrl: "previews/day-10.png",
     date: "Day 10",
     component: Day10,
+  },
+  {
+    id: 11,
+    title: "Walking Boots",
+    href: "/days/11",
+    description:
+      `
+      An animation of a pair of walking boots.
+      I got some good practice with organizing tailwind classes into reusable React components.
+      `,
+    imageUrl: "previews/day-11.png",
+    date: "Day 11",
+    component: Day11,
   },
 ];
