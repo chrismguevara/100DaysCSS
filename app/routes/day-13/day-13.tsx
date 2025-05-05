@@ -1,6 +1,7 @@
 import { useId, useRef, useState } from "react";
 import type { Route } from "../+types/day-13";
 import "./day-13.css";
+import { useHref } from "react-router";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -10,26 +11,28 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Day13() {
+  // Using useHref to prepend the basepath to the image paths
+  const path = useHref("/imgs/day-13");
   const users = [
     {
       id: 1,
       name: "Julia Toth",
-      image: "/imgs/day-13/13-1.jpg",
+      image: `${path}/13-1.jpg`,
     },
     {
       id: 2,
       name: "John Doe",
-      image: "/imgs/day-13/13-2.jpg",
+      image: `${path}/13-2.jpg`,
     },
     {
       id: 3,
       name: "Jane Smith",
-      image: "/imgs/day-13/13-3.jpg",
+      image: `${path}/13-3.jpg`,
     },
     {
       id: 4,
       name: "Elizabeth Doe",
-      image: "/imgs/day-13/13-4.jpg",
+      image: `${path}/13-4.jpg`,
     },
   ];
   const [selectedUser, setSelectedUser] = useState<
@@ -110,7 +113,7 @@ export default function Day13() {
         </div>
         {/* Header Image */}
         <img
-          src="/imgs/day-13/13-1-header.jpg"
+          src={`${path}/13-1-header.jpg`}
           alt="Header image"
           className={`w-full h-auto 
             
