@@ -2,6 +2,7 @@ import Day1 from "./day-1/day-1";
 import Day10 from "./day-10/day-10";
 import Day11 from "./day-11/day-11";
 import Day12 from "./day-12/day-12";
+import Day13 from "./day-13/day-13";
 import Day2 from "./day-2/day-2";
 import Day3 from "./day-3/day-3";
 import Day4 from "./day-4/day-4";
@@ -170,5 +171,17 @@ export const posts = [
     imageUrl: "previews/day-12.png",
     date: "Day 12",
     component: Day12,
+  },
+  {
+    id: 13,
+    title: "User Gallery",
+    href: "/days/13",
+    description:
+      `
+      A gallery of user profiles. Got more practice with CSS Grid and a lot of animations with this one.
+      `,
+    imageUrl: "previews/day-13.png",
+    date: "Day 13",
+    component: Day13,
   },
 ];
