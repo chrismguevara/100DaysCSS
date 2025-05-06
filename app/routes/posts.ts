@@ -12,6 +12,7 @@ import Day7 from "./day-7/day-7";
 import Day8 from "./day-8/day-8";
 import Day9 from "./day-9/day-9";
 import Day14 from './day-14/day-14';
+import Day15 from './day-15/day-15';
 /* __END OF IMPORTS__ */
 
 // TODO Add metadata for each post
@@ -198,6 +199,19 @@ export const posts = [
     imageUrl: "previews/day-14.png",
     date: "Day 14",
     component: Day14,
+  },
+  {
+    id: 15,
+    title: "Upload",
+    href: "/days/15",
+    description:
+      `
+      A fake file upload widget that displays a progress bar with animated icons. If you drag and drop a file onto the widget, the progress bar will animate and the icon will change to a checkmark when done.
+      It was fun to revisit some drag and drop APIs.
+      `,
+    imageUrl: "previews/day-15.png",
+    date: "Day 15",
+    component: Day15,
   },
   /* __END OF POSTS__ */
 ];
