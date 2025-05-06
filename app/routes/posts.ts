@@ -11,6 +11,8 @@ import Day6 from "./day-6/day-6";
 import Day7 from "./day-7/day-7";
 import Day8 from "./day-8/day-8";
 import Day9 from "./day-9/day-9";
+import Day14 from './day-14/day-14';
+/* __END OF IMPORTS__ */
 
 // TODO Add metadata for each post
 export const posts = [
@@ -184,4 +186,18 @@ export const posts = [
     date: "Day 13",
     component: Day13,
   },
+  {
+    id: 14,
+    title: "Byciclopter",
+    href: "/days/14",
+    description:
+      `
+      An animated card that shows a bycicle on the front and a helicopter on the back. Hovering the mouse over the card flips it.
+      This was enjoyable to make. I got to make use of the perspective property and the transform-style property.
+      `,
+    imageUrl: "previews/day-14.png",
+    date: "Day 14",
+    component: Day14,
+  },
+  /* __END OF POSTS__ */
 ];
