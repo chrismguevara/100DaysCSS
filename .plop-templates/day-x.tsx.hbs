@@ -1,0 +1,25 @@
+import type { Route } from "../+types/day-{{ day }}";
+import "./day-{{ day }}.css";
+
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "CSS Day {{ day }}" },
+    { name: "description", content: "Day {{ day }} of 100 Days of CSS challenge" },
+  ];
+}
+
+export default function Day{{ day }}() {
+  return (
+    <div
+      className={`
+      w-full h-full
+      bg-white
+      font-['Open_Sans',sans-serif] antialiased
+      grid grid-rows-1 grid-cols-1 place-items-center
+      overflow-hidden
+      `}
+    >
+      Day {{ day }}
+    </div>
+  );
+}
