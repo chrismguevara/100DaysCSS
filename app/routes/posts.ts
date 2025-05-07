@@ -13,6 +13,7 @@ import Day8 from "./day-8/day-8";
 import Day9 from "./day-9/day-9";
 import Day14 from './day-14/day-14';
 import Day15 from './day-15/day-15';
+import Day16 from './day-16/day-16';
 /* __END OF IMPORTS__ */
 
 // TODO Add metadata for each post
@@ -212,6 +213,18 @@ export const posts = [
     imageUrl: "previews/day-15.png",
     date: "Day 15",
     component: Day15,
+  },
+  {
+    id: 16,
+    title: "Blobby",
+    href: "/days/16",
+    description:
+      `
+      An animation of a blobby shape that morphs into an octagon, a triangle, and then back to a blob.
+      `,
+    imageUrl: "previews/day-16.png",
+    date: "Day 16",
+    component: Day16,
   },
   /* __END OF POSTS__ */
 ];
