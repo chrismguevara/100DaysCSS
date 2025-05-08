@@ -41,11 +41,26 @@ export default function Day7() {
       `}
         >
           <ul className={`py-3`}>
-            <MenuItem>Dashboard</MenuItem>
-            <MenuItem>Profile</MenuItem>
-            <MenuItem>Notifications</MenuItem>
-            <MenuItem>Messages</MenuItem>
-            <MenuItem>Settings</MenuItem>
+            <MenuItem>
+              <span className="fa fa-dashboard"></span>
+              Dashboard
+            </MenuItem>
+            <MenuItem>
+              <span className="fa fa-user"></span>
+              Profile
+            </MenuItem>
+            <MenuItem>
+              <span className="fa fa-bell"></span>
+              Notifications
+            </MenuItem>
+            <MenuItem>
+              <span className="fa fa-comments"></span>
+              Messages
+            </MenuItem>
+            <MenuItem>
+              <span className="fa fa-cog"></span>
+              Settings
+            </MenuItem>
           </ul>
         </nav>
       </div>
@@ -78,18 +93,54 @@ export default function Day7() {
             className={`
               w-[29px] h-[15px]
               row-1 col-1
-              bg-[var(--blue-light)] hover:bg-white
               transition-[background-color] duration-[.3s] ease
+              relative
+              group
               cursor-pointer`}
             aria-controls={sidenavId}
             aria-expanded={isSidenavActive}
             onClick={() => setIsSidenavActive(!isSidenavActive)}
-          ></button>
+          >
+            <svg className="absolute top-0 left-0 w-full h-full">
+              <line
+                x1="0"
+                y1="3.5"
+                x2="20"
+                y2="3.5"
+                stroke-width="3"
+                className={`
+                  group-hover:stroke-white stroke-[var(--blue-light)]
+                  transition-all duration-[.2s] ease-in-out
+                `}
+              />
+              <circle
+                cx="25"
+                cy="3.5"
+                r="3.5"
+                fill="white"
+                className={`
+                  group-hover:fill-white fill-[var(--blue-light)]
+                  transition-all duration-[.2s] ease-in-out
+                `}
+              />
+              <line
+                x1="0"
+                y1="13"
+                x2="29"
+                y2="13"
+                stroke-width="3"
+                className={`
+                  group-hover:stroke-white stroke-[var(--blue-light)]
+                  transition-all duration-[.2s] ease-in-out
+                `}
+              />
+            </svg>
+          </button>
           <h2 className="text-center row-1 col-2">Notifications</h2>
           <div
             id={searchContainerId}
             className={`
-              col-start-1 col-end-3 row-1 
+              col-start-1 col-end-3 row-1
               h-full
               flex flex-col justify-center pr-4 -ml-1
               transition-all duration-[.3s] ease-in-out
@@ -104,23 +155,30 @@ export default function Day7() {
               type="search"
               placeholder="Search ..."
               className={`
-                rounded-[17px] 
-                bg-white 
-                my-auto 
-                h-[34px] px-[17px] 
+                rounded-[17px]
+                bg-white
+                my-auto
+                h-[34px] px-[17px]
                 text-[#666] text-xs`}
             />
           </div>
           <button
             className={`
               w-[20px] h-[21px] 
-              bg-[var(--blue-light)] hover:bg-white
               transition-[background-color] duration-[.3s] ease
               cursor-pointer`}
             aria-expanded={isSearchActive}
             aria-controls={searchContainerId}
             onClick={() => setIsSearchActive(!isSearchActive)}
-          ></button>
+          >
+            <span
+              className={`
+              fa fa-search
+              text-xl text-[var(--blue-light)] hover:text-white
+              transition-all duration-[.3s] ease
+            `}
+            ></span>
+          </button>
         </header>
         {/* Profile */}
         <section
@@ -222,20 +280,12 @@ function MenuItem({ children }: { children: React.ReactNode }) {
         text-sm
         group
         hover:bg-[#385269]
+        text-[#93B2CD] hover:text-white
+        leading-none
         transition-all duration-[.3s] ease-in-out  
       `}
       >
-        <span
-          className={`
-      w-[14px] h-[14px]
-      rounded-full
-      bg-[#93B2CD] group-hover:bg-white
-      transition-all duration-[.3s] ease-in-out
-    `}
-        ></span>
-        <span className="text-[#93B2CD] leading-none group-hover:text-white transition-all duration-[.3s] ease-in-out">
-          {children}
-        </span>
+        {children}
       </a>
     </li>
   );
