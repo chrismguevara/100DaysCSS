@@ -15,6 +15,7 @@ import Day14 from './day-14/day-14';
 import Day15 from './day-15/day-15';
 import Day16 from './day-16/day-16';
 import Day17 from './day-17/day-17';
+import Day18 from './day-18/day-18';
 /* __END OF IMPORTS__ */
 
 // TODO Add metadata for each post
@@ -238,6 +239,19 @@ export const posts = [
     imageUrl: "previews/day-17.png",
     date: "Day 17",
     component: Day17,
+  },
+  {
+    id: 18,
+    title: "Elastic",
+    href: "/days/18",
+    description:
+      `
+      An animation of an elastic line that separates the green and gray parts of the square.
+      Since this is mostly a simple animation, I didn't need to use any modern CSS features here.
+      `,
+    imageUrl: "previews/day-18.png",
+    date: "Day 18",
+    component: Day18,
   },
   /* __END OF POSTS__ */
 ];
