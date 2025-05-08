@@ -14,6 +14,7 @@ import Day9 from "./day-9/day-9";
 import Day14 from './day-14/day-14';
 import Day15 from './day-15/day-15';
 import Day16 from './day-16/day-16';
+import Day17 from './day-17/day-17';
 /* __END OF IMPORTS__ */
 
 // TODO Add metadata for each post
@@ -225,6 +226,18 @@ export const posts = [
     imageUrl: "previews/day-16.png",
     date: "Day 16",
     component: Day16,
+  },
+  {
+    id: 17,
+    title: "Penrose Triangle",
+    href: "/days/17",
+    description:
+      `
+      A penrose triangle whose colors change when you hover over it. I made use of the 'repeating-linear-gradient' function to create the stripes in the background.
+      `,
+    imageUrl: "previews/day-17.png",
+    date: "Day 17",
+    component: Day17,
   },
   /* __END OF POSTS__ */
 ];
